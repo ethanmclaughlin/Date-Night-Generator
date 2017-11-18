@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Date Night Generator/Date.swift"
+            timestampString = "532646111.30237"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "Date"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Date_Night_Generator.Date.priceTag.getter : Swift.String"
+                  moduleName = "Date Night Generator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cisstudent/Documents/Date%20Night%20Generator/Date%20Night%20Generator/Date.swift"
+                  timestampString = "532646111.441481"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Date_Night_Generator.Date.priceTag.setter : Swift.String"
+                  moduleName = "Date Night Generator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cisstudent/Documents/Date%20Night%20Generator/Date%20Night%20Generator/Date.swift"
+                  timestampString = "532646111.44439"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "146">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Date_Night_Generator.Date.init(location: Swift.String, distanceFromUser: Swift.Double, name: Swift.String, priceTag: Swift.String, type: Swift.String, photo: __ObjC.UIImage) -&gt; Date_Night_Generator.Date"
+                  moduleName = "Date Night Generator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cisstudent/Documents/Date%20Night%20Generator/Date%20Night%20Generator/Date.swift"
+                  timestampString = "532646111.446967"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "674">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
