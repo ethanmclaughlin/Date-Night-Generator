@@ -14,6 +14,15 @@ class DatesViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        MealStackView.removeFromSuperview()
+        activityStackView.removeFromSuperview()
+        
+        if date.meal != nil {
+            scrollview.addSubview(MealStackView)
+        }
+        if date.activity != nil{
+            scrollview.addSubview(activityStackView)
+        }
         populateDates()
     }
 
@@ -22,30 +31,38 @@ class DatesViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBOutlet weak var dateimage: UIImageView!
+    @IBOutlet weak var activityStackView: UIStackView!
+    @IBOutlet weak var activityThumbnail: UIImageView!
+    @IBOutlet weak var activityPrice: UILabel!
+    @IBOutlet weak var activityAddress: UILabel!
+    @IBOutlet weak var activityName: UILabel!
     
-    @IBOutlet weak var pricelabel: UILabel!
+    @IBOutlet weak var MealStackView: UIStackView!
+    @IBOutlet weak var mealImage: UIImageView!
+    @IBOutlet weak var mealPrice: UILabel!
     
-    @IBOutlet weak var addresslabel: UILabel!
-    
-    @IBOutlet weak var gobutton: UIButton!
-    
-    @IBOutlet weak var reviewsbutton: UIButton!
-    
-    @IBOutlet weak var rerollbutton: UIButton!
+    @IBOutlet weak var mealAddress: UILabel!
+    @IBOutlet weak var mealName: UILabel!
     
     @IBOutlet weak var scrollview: UIScrollView!
-    
-    var Dates = [Date]()
+    var date = Date(activity: nil, meal: nil)
     
     
     func populateDates(){
-        for Date in Dates{
+        if ((date.activity) != nil) {
+
+            activityThumbnail.image = date.activity?.image
+            activityPrice.text = date.activity?.priceTag
+            activityAddress.text = date.activity?.location
+            activityName.text = date.activity?.name
             
-            dateimage.image = Date.image
-            pricelabel.text = Date.priceTag
-            addresslabel.text = Date.location
-            
+        }
+        if ((date.meal) != nil){
+  
+            mealImage.image = date.meal?.image
+            mealPrice.text = date.meal?.priceTag
+            mealAddress.text = date.meal?.location
+            mealName.text = date.meal?.name
         }
         
     }

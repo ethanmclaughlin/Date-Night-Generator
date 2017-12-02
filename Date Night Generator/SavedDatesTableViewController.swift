@@ -10,12 +10,15 @@ import UIKit
 
 class SavedDatesTableViewController: UITableViewController {
     var savedDates = [Date]()
+    var passingDate = Date(activity: nil, meal: nil)
     private func LoadSavedDates(){
         let thumbnail1 = UIImage(named: "CasaMarina.jpg")
         let thumbnail2 = UIImage(named: "Sizzler.jpg")
         
-        let saveDate1 = Date(location: "76 Old Hickory Blvd. Jackson, TN", distanceFromUser: 25.6, name: "Casa Marina", priceTag: "$$", type: "Meal", photo: thumbnail1!)
-        let saveDate2 = Date(location: "581 Old Hickory Blvd. Jackson, TN", distanceFromUser: 23.4, name: "Sizzler Indian Cuisine", priceTag: "$$$", type: "Meal", photo: thumbnail2!)
+        let saveMeal1 = Meal(location: "76 Old Hickory Blvd. Jackson, TN", distanceFromUser: 25.6, name: "Casa Marina", priceTag: "$$", photo: thumbnail1!)
+        let saveMeal2 = Meal(location: "581 Old Hickory Blvd. Jackson, TN", distanceFromUser: 23.4, name: "Sizzler Indian Cuisine", priceTag: "$$$", photo: thumbnail2!)
+        let saveDate1 = Date(activity: nil, meal: saveMeal1)
+        let saveDate2 = Date(activity: nil, meal: saveMeal2)
         
         savedDates += [saveDate1, saveDate2]
         
@@ -52,12 +55,17 @@ class SavedDatesTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? SavedDatesTableViewCell
         let date = savedDates[indexPath.row]
         // Configure the cell...
-        cell?.datetitle.text = date.name
-        cell?.dateprice.text = date.priceTag
-        cell?.thumbnail.image = date.image
-        return cell!
+        if (date.meal != nil){
+            cell?.datetitle.text = date.meal?.name
+            cell?.dateprice.text = date.meal?.priceTag
+            cell?.thumbnail.image = date.meal?.image
+        }
+          return cell!
     }
- 
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        passingDate = savedDates[indexPath.row]
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -94,14 +102,18 @@ class SavedDatesTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if let datedetailsVC = segue.destination as? DatesViewController{
+            let generatedDateObject = passingDate
+            datedetailsVC.date = generatedDateObject
+        }
     }
-    */
-
+    
 }
+

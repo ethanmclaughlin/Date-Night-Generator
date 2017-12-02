@@ -9,22 +9,11 @@
 import Foundation
 import UIKit
 class Date {
-    var location = ""
-    var distanceFromUser = 0.0
-    var name = ""
-    var priceTag = ""
-    var datetype = ""
-    var IsSaved = false
-    var IsDoubleDate = false
-    var image: UIImage?
+    var meal:Meal?
+    var activity:Activity?
     
-    init(location:String, distanceFromUser:Double, name:String, priceTag:String, type:String, photo: UIImage){
-        self.location = location;
-        self.distanceFromUser = distanceFromUser;
-        self.name = name;
-        self.priceTag = priceTag
-        self.datetype = type
-        self.image = photo
-        
+    init (activity:Activity? , meal:Meal?){
+        self.activity = activity
+        self.meal = meal
     }
 }
