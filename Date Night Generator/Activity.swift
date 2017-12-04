@@ -1,5 +1,5 @@
 //
-//  Meal.swift
+//  Activity.swift
 //  Date Night Generator
 //
 //  Created by CIS Student on 11/27/17.
@@ -9,14 +9,12 @@
 import Foundation
 import UIKit
 
-class Meal{
+class Activity{
     var location = ""
     var distanceFromUser = 0.0
     var name = ""
     var priceTag = ""
     var image: UIImage!
-    
-
     
     init(location:String, distanceFromUser:Double, name:String, priceTag:String, photo: UIImage!){
         self.location = location;
@@ -27,4 +25,3 @@ class Meal{
         
     }
 }
-

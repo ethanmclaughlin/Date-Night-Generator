@@ -22,8 +22,7 @@ class DateNightViewController: UIViewController {
     }
     
     private func getRNG(max:Int) -> Int{
-        let rngMax = max + 1
-        let randomNumber = Int(arc4random_uniform(UInt32(rngMax)))
+        let randomNumber = Int(arc4random_uniform(UInt32(max)))
         return randomNumber
     }
     
@@ -53,36 +52,54 @@ class DateNightViewController: UIViewController {
         let price = Price_Segment.selectedSegmentIndex
         let datetype = Type_Segment.selectedSegmentIndex
         
-        var date = Date(activity: nil, meal: nil)
+        let fakedata = FakeAPIList()
+        
+        let date = Date(activity: nil, meal: nil)
         
         //Pull from Google API everything that matches radius maximum and price maximum
         
         //Divide that list into 2 lists, activities and meals
+        var activitydate: Activity
+        var mealdate: Meal
         
         if (datetype == 0){
             //that's a meal only
             //populate a meal object with the info in an index from the meals list based on rng
-            let thumbnail1 = UIImage(named: "CasaMarina.jpg")
-            let mealDate = Meal(location: "76 Old Hickory Blvd. Jackson, TN", distanceFromUser: 25.6, name: "Casa Marina", priceTag: "$$", photo: thumbnail1!)
-            date.meal = mealDate
+            
+            if (price < 3){
+                mealdate = fakedata.mealList[getRNG(max: fakedata.mealList.count)]
+            }
+            else{
+                mealdate = fakedata.mealList[1]
+            }
+            date.meal = mealdate
         }
         else if (datetype == 1){
             //This is activity only
             //populate an activity object with the info in an index from the activity list based on rng
-            let thumbnail1 = UIImage(named: "Movie.jpg")
-            let activityDate = Activity(location: "575 Vann Dr. Jackson, TN", distanceFromUser: 25.6, name: "See a movie!", priceTag: "$$$$", photo: thumbnail1!)
-            date.activity = activityDate
+            
+            if (price < 3){
+                activitydate = fakedata.activityList[1]
+            }
+            else{
+                activitydate = fakedata.activityList[getRNG(max: fakedata.activityList.count)]
+            }
+            date.activity = activitydate
         }
         else {
             //this is both
             
             //see above, but both
-            let thumbnail1 = UIImage(named: "Movie.jpg")
-            let thumbnail2 = UIImage(named: "Sizzler.jpg")
-            let mealDate = Meal(location: "581 Old Hickory Blvd. Jackson, TN", distanceFromUser: 23.4, name: "Sizzler Indian Cuisine", priceTag: "$$$", photo: thumbnail2!)
-            let activityDate = Activity(location: "575 Vann Dr. Jackson, TN", distanceFromUser: 25.6, name: "See a movie!", priceTag: "$$$$", photo: thumbnail1!)
-            date.meal = mealDate
-            date.activity = activityDate
+            if (price < 3){
+                mealdate = fakedata.mealList[getRNG(max: fakedata.mealList.count)]
+                activitydate = fakedata.activityList[1]
+            }
+            else{
+                activitydate = fakedata.activityList[getRNG(max: fakedata.activityList.count)]
+                mealdate = fakedata.mealList[1]
+            }
+            date.activity = activitydate
+            date.meal = mealdate
         }
         
         return date

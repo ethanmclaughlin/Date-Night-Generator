@@ -26,6 +26,8 @@
 		D445FBFE1FBE966A007475A2 /* Sizzler.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D445FBFB1FBE966A007475A2 /* Sizzler.jpg */; };
 		D4C5DC6D1F69BDD1006F7A4F /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C5DC6C1F69BDD1006F7A4F /* Data.swift */; };
 		D4C5DC6F1F69BE21006F7A4F /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C5DC6E1F69BE21006F7A4F /* Date.swift */; };
+		D4FAC1C11FD4D26F00345423 /* FakeAPILists.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FAC1C01FD4D26F00345423 /* FakeAPILists.swift */; };
+		D4FAC1C31FD4D63A00345423 /* Chickasaw.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4FAC1C21FD4D63900345423 /* Chickasaw.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		D445FBFB1FBE966A007475A2 /* Sizzler.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Sizzler.jpg; sourceTree = "<group>"; };
 		D4C5DC6C1F69BDD1006F7A4F /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		D4C5DC6E1F69BE21006F7A4F /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		D4FAC1C01FD4D26F00345423 /* FakeAPILists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAPILists.swift; sourceTree = "<group>"; };
+		D4FAC1C21FD4D63900345423 /* Chickasaw.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Chickasaw.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 			children = (
 				D445FBFA1FBE966A007475A2 /* CasaMarina.jpg */,
 				D445FBF91FBE966A007475A2 /* Movie.jpg */,
+				D4FAC1C21FD4D63900345423 /* Chickasaw.jpg */,
 				D445FBFB1FBE966A007475A2 /* Sizzler.jpg */,
 			);
 			path = Pictures;
@@ -103,6 +108,7 @@
 				D443373F1F57539600717F13 /* Assets.xcassets */,
 				D42989811F608B0A00888086 /* DateNightViewController.swift */,
 				D43A81191FCCB1BE00AA6C53 /* Meal.swift */,
+				D4FAC1C01FD4D26F00345423 /* FakeAPILists.swift */,
 				D43A811B1FCCB23E00AA6C53 /* Activity.swift */,
 				D44337411F57539600717F13 /* LaunchScreen.storyboard */,
 				D44337441F57539600717F13 /* Info.plist */,
@@ -174,6 +180,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4FAC1C31FD4D63A00345423 /* Chickasaw.jpg in Resources */,
 				D445FBFC1FBE966A007475A2 /* Movie.jpg in Resources */,
 				D445FBFE1FBE966A007475A2 /* Sizzler.jpg in Resources */,
 				D44337431F57539600717F13 /* LaunchScreen.storyboard in Resources */,
@@ -199,6 +206,7 @@
 				D44337371F57539500717F13 /* AppDelegate.swift in Sources */,
 				D44337391F57539500717F13 /* FirstViewController.swift in Sources */,
 				D40C35981FBCE381009C198F /* DatesViewController.swift in Sources */,
+				D4FAC1C11FD4D26F00345423 /* FakeAPILists.swift in Sources */,
 				D40C358C1FBA2F2C009C198F /* ReviewsTableViewController.swift in Sources */,
 				D42989821F608B0A00888086 /* DateNightViewController.swift in Sources */,
 				D43A811C1FCCB23E00AA6C53 /* Activity.swift in Sources */,

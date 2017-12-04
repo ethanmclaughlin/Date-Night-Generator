@@ -11,14 +11,11 @@ import UIKit
 class SavedDatesTableViewController: UITableViewController {
     var savedDates = [Date]()
     var passingDate = Date(activity: nil, meal: nil)
+    let fakedata = FakeAPIList()
     private func LoadSavedDates(){
-        let thumbnail1 = UIImage(named: "CasaMarina.jpg")
-        let thumbnail2 = UIImage(named: "Sizzler.jpg")
-        
-        let saveMeal1 = Meal(location: "76 Old Hickory Blvd. Jackson, TN", distanceFromUser: 25.6, name: "Casa Marina", priceTag: "$$", photo: thumbnail1!)
-        let saveMeal2 = Meal(location: "581 Old Hickory Blvd. Jackson, TN", distanceFromUser: 23.4, name: "Sizzler Indian Cuisine", priceTag: "$$$", photo: thumbnail2!)
-        let saveDate1 = Date(activity: nil, meal: saveMeal1)
-        let saveDate2 = Date(activity: nil, meal: saveMeal2)
+     
+        let saveDate1 = Date(activity: nil, meal: fakedata.mealList[1])
+        let saveDate2 = Date(activity: fakedata.activityList[1], meal: nil)
         
         savedDates += [saveDate1, saveDate2]
         
@@ -55,11 +52,19 @@ class SavedDatesTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? SavedDatesTableViewCell
         let date = savedDates[indexPath.row]
         // Configure the cell...
-        if (date.meal != nil){
-            cell?.datetitle.text = date.meal?.name
-            cell?.dateprice.text = date.meal?.priceTag
-            cell?.thumbnail.image = date.meal?.image
+        if (date.meal == nil){
+                cell?.datetitle.text = date.activity?.name
+                cell?.dateprice.text = date.activity?.priceTag
+                cell?.thumbnail.image = date.activity?.image
         }
+        else if (date.activity == nil){
+                cell?.datetitle.text = date.meal?.name
+                cell?.dateprice.text = date.meal?.priceTag
+                cell?.thumbnail.image = date.meal?.image
+        }
+        //TO DO
+        //else {}
+
           return cell!
     }
     
