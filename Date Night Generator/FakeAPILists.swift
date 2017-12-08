@@ -20,8 +20,9 @@ class FakeAPIList{
     ]
     
     let activityList: [Activity] = [
+        Activity(location: "Anywhere", distanceFromUser: 0.0, name: "Watch some Netflix", priceTag: "Free", photo: UIImage(named: "netflix")),
         Activity(location: "455 N Church Ave, Henderson, TN", distanceFromUser: 1.3, name: "Gene Record Memorial Park", priceTag: "Free", photo: UIImage(named: "GeneRecord")),
-        Activity(location: "20 Cabin Ln, Henderson, TN", distanceFromUser: 8.8, name: "Chickasaw State Park", priceTag: "Free", photo: UIImage(named: "Chicksaw")),
+        Activity(location: "20 Cabin Ln, Henderson, TN", distanceFromUser: 8.8, name: "Chickasaw State Park", priceTag: "Free", photo: UIImage(named: "Chickasaw")),
         Activity(location: "217 E Deaderick St #105, Jackson, TN", distanceFromUser: 17.7, name: "Jackson Escape Rooms", priceTag: "$$$", photo: UIImage(named: "EscapeRooms")),
         Activity(location: "48 Casey Jones Ln, Jackson, TN", distanceFromUser: 22.1, name: "Casey Jones Mini Golf", priceTag: "$", photo: UIImage(named: "MiniGolf")),
         Activity(location: "59 Bowling Dr, Jackson, TN", distanceFromUser: 25.4, name: "Go Bowling!", priceTag: "$$", photo: UIImage(named: "Bowling")),

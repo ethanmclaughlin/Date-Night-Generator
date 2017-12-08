@@ -14,15 +14,17 @@ class SavedDatesTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    @IBOutlet weak var dateprice: UILabel!
+
 
     @IBOutlet weak var thumbnail: UIImageView!
-    
-    @IBOutlet weak var datetitle: UILabel!
-    
-    
-    
-    
+    @IBOutlet weak var mealprice: UILabel!
+    @IBOutlet weak var mealname: UILabel!
+    @IBOutlet weak var activityprice: UILabel!
+    @IBOutlet weak var activityname: UILabel!
+
+    @IBOutlet weak var mealstack: UIStackView!
+    @IBOutlet weak var activitystack: UIStackView!
+
     
 
     

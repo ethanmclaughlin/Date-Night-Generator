@@ -55,10 +55,11 @@ class DateNightViewController: UIViewController {
 
     
     public func generateDateObject() -> Date {
-        let searchradius = Radius_Segment.selectedSegmentIndex
-        var price = Price_Segment.selectedSegmentIndex
-        let datetype = Type_Segment.selectedSegmentIndex
-        
+
+            let searchradius = Radius_Segment.selectedSegmentIndex
+            var price = Price_Segment.selectedSegmentIndex
+            let datetype = Type_Segment.selectedSegmentIndex
+ 
         let fakedata = FakeAPIList()
         
         let date = Date(activity: nil, meal: nil)
@@ -156,10 +157,10 @@ class DateNightViewController: UIViewController {
         else if (5.0 < activity.distanceFromUser && activity.distanceFromUser <= 10.0){
            distancecategories = 1
         }
-        else if (10.0 < activity.distanceFromUser && activity.distanceFromUser <= 20.0){
+        else if (10.0 < activity.distanceFromUser && activity.distanceFromUser <= 25.0){
             distancecategories = 2
         }
-        else if (20.0 < activity.distanceFromUser && activity.distanceFromUser <= 50.0){
+        else if (25.0 < activity.distanceFromUser && activity.distanceFromUser <= 50.0){
             distancecategories = 3
         }
         else {
@@ -206,10 +207,10 @@ class DateNightViewController: UIViewController {
         else if (5.0 < meal.distanceFromUser && meal.distanceFromUser <= 10.0){
             distancecategories = 1
         }
-        else if (10.0 < meal.distanceFromUser && meal.distanceFromUser <= 20.0){
+        else if (10.0 < meal.distanceFromUser && meal.distanceFromUser <= 25.0){
             distancecategories = 2
         }
-        else if (20.0 < meal.distanceFromUser && meal.distanceFromUser <= 50.0){
+        else if (25.0 < meal.distanceFromUser && meal.distanceFromUser <= 50.0){
             distancecategories = 3
         }
         else {
@@ -239,6 +240,9 @@ class DateNightViewController: UIViewController {
         
         if let datedetailsVC = segue.destination as? DatesViewController{
             let generatedDateObject = generateDateObject()
+            datedetailsVC.price = Price_Segment.selectedSegmentIndex
+            datedetailsVC.searchradius = Radius_Segment.selectedSegmentIndex
+            datedetailsVC.datetype = Type_Segment.selectedSegmentIndex
             datedetailsVC.date = generatedDateObject
         }
         

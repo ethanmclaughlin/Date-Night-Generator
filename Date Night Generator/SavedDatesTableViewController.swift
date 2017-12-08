@@ -14,10 +14,11 @@ class SavedDatesTableViewController: UITableViewController {
     let fakedata = FakeAPIList()
     private func LoadSavedDates(){
      
-        let saveDate1 = Date(activity: nil, meal: fakedata.mealList[1])
-        let saveDate2 = Date(activity: fakedata.activityList[1], meal: nil)
+        let saveDate1 = Date(activity: nil, meal: fakedata.mealList[3])
+        let saveDate2 = Date(activity: fakedata.activityList[4], meal: nil)
+        let saveDate3 = Date(activity: fakedata.activityList[2], meal: fakedata.mealList[4])
         
-        savedDates += [saveDate1, saveDate2]
+        savedDates += [saveDate1, saveDate2, saveDate3]
         
     }
     override func viewDidLoad() {
@@ -52,15 +53,23 @@ class SavedDatesTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? SavedDatesTableViewCell
         let date = savedDates[indexPath.row]
         // Configure the cell...
-        if (date.meal == nil){
-                cell?.datetitle.text = date.activity?.name
-                cell?.dateprice.text = date.activity?.priceTag
-                cell?.thumbnail.image = date.activity?.image
-        }
-        else if (date.activity == nil){
-                cell?.datetitle.text = date.meal?.name
-                cell?.dateprice.text = date.meal?.priceTag
+        if (date.meal != nil){
+                cell?.mealname.text = date.meal?.name
+                cell?.mealprice.text = date.meal?.priceTag
                 cell?.thumbnail.image = date.meal?.image
+        }
+        else {
+            cell?.mealstack.removeFromSuperview()
+        }
+        if (date.activity != nil){
+                cell?.activityname.text = date.activity?.name
+                cell?.activityprice.text = date.activity?.priceTag
+            if (date.meal == nil){
+                cell?.thumbnail.image = date.activity?.image
+            }
+        }
+        else{
+            cell?.activitystack.removeFromSuperview()
         }
         //TO DO
         //else {}
@@ -68,9 +77,9 @@ class SavedDatesTableViewController: UITableViewController {
           return cell!
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    /*override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         passingDate = savedDates[indexPath.row]
-    }
+    }*/
 
     /*
     // Override to support conditional editing of the table view.
@@ -115,9 +124,8 @@ class SavedDatesTableViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if let datedetailsVC = segue.destination as? DatesViewController{
-            let generatedDateObject = passingDate
-            datedetailsVC.date = generatedDateObject
-            datedetailsVC.TryAgainButton.isEnabled = false
+            datedetailsVC.date = passingDate
+            datedetailsVC.loadedsaveddateflag = true
         }
     }
     
