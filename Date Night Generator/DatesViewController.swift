@@ -181,13 +181,13 @@ class DatesViewController: UIViewController {
         if (activity.distanceFromUser <= 5.0){
             distancecategories = 0
         }
-        else if (5.0 < activity.distanceFromUser && activity.distanceFromUser <= 10.0){
+        else if (activity.distanceFromUser <= 10.0){
             distancecategories = 1
         }
-        else if (10.0 < activity.distanceFromUser && activity.distanceFromUser <= 20.0){
+        else if (activity.distanceFromUser <= 25.0){
             distancecategories = 2
         }
-        else if (20.0 < activity.distanceFromUser && activity.distanceFromUser <= 50.0){
+        else if (activity.distanceFromUser <= 50.0){
             distancecategories = 3
         }
         else {
@@ -231,13 +231,13 @@ class DatesViewController: UIViewController {
         if (meal.distanceFromUser <= 5.0){
             distancecategories = 0
         }
-        else if (5.0 < meal.distanceFromUser && meal.distanceFromUser <= 10.0){
+        else if (meal.distanceFromUser <= 10.0){
             distancecategories = 1
         }
-        else if (10.0 < meal.distanceFromUser && meal.distanceFromUser <= 20.0){
+        else if (meal.distanceFromUser <= 25.0){
             distancecategories = 2
         }
-        else if (20.0 < meal.distanceFromUser && meal.distanceFromUser <= 50.0){
+        else if (meal.distanceFromUser <= 50.0){
             distancecategories = 3
         }
         else {
