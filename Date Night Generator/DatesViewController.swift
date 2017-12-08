@@ -52,6 +52,20 @@ class DatesViewController: UIViewController {
 
     @IBOutlet weak var superstackview: UIStackView!
     
+
+    @IBAction func getMealDirections(_ sender: Any) {
+        let mealsearch = date.meal?.name.replacingOccurrences(of: " ", with: "+")
+        if let url = URL(string: "https://maps.apple.com/?q=" + mealsearch!){
+            UIApplication.shared.openURL(url)
+        }
+    }
+    
+    @IBAction func getActivityDirections(_ sender: Any) {
+        let activitysearch = date.activity?.name.replacingOccurrences(of: " ", with: "+")
+        if let url = URL(string: "https://maps.apple.com/?q=" + activitysearch!){
+            UIApplication.shared.openURL(url)
+        }
+    }
     var loadedsaveddateflag = false
     var date = Date(activity: nil, meal: nil)
     var price = 0

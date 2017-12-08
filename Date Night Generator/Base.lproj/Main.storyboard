@@ -178,7 +178,7 @@
                                         <rect key="frame" x="0.0" y="5" width="376" height="474"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="C9v-Ax-Av1">
-                                                <rect key="frame" x="0.0" y="0.0" width="376" height="226.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="376" height="236.5"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X8P-TD-GSf">
                                                         <rect key="frame" x="0.0" y="0.0" width="376" height="80"/>
@@ -230,7 +230,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="XdB-nk-kyL">
-                                                        <rect key="frame" x="0.0" y="173.5" width="376" height="53"/>
+                                                        <rect key="frame" x="0.0" y="173.5" width="376" height="63"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleAspectFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPc-ue-U1s">
                                                                 <rect key="frame" x="0.0" y="0.0" width="376" height="30"/>
@@ -241,12 +241,15 @@
                                                                 <state key="normal" title="Directions">
                                                                     <color key="titleColor" red="1" green="0.9557734537" blue="0.94917041130000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="getMealDirections:" destination="OYq-8R-ipV" eventType="touchUpInside" id="5WQ-za-91A"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleAspectFit" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edR-gc-58F">
-                                                                <rect key="frame" x="0.0" y="33" width="376" height="20"/>
+                                                                <rect key="frame" x="0.0" y="33" width="376" height="30"/>
                                                                 <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="20" id="EoP-vR-B2w"/>
+                                                                    <constraint firstAttribute="height" constant="30" id="EoP-vR-B2w"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Reviews">
                                                                     <color key="titleColor" red="0.98132029549999999" green="1" blue="0.97997777890000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -257,10 +260,12 @@
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="QCE-UR-olz" firstAttribute="top" secondItem="C9v-Ax-Av1" secondAttribute="top" constant="145" id="5ia-sx-jWM"/>
+                                                    <constraint firstItem="0gS-te-plQ" firstAttribute="top" secondItem="oHq-b5-63h" secondAttribute="bottom" constant="8" id="aXU-di-E9T"/>
+                                                    <constraint firstItem="QCE-UR-olz" firstAttribute="top" secondItem="0gS-te-plQ" secondAttribute="bottom" constant="8" id="dbv-qf-7i8"/>
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="XWD-NI-mrL">
-                                                <rect key="frame" x="0.0" y="236.5" width="376" height="237.5"/>
+                                                <rect key="frame" x="0.0" y="246.5" width="376" height="227.5"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uAp-4I-CtS">
                                                         <rect key="frame" x="0.0" y="0.0" width="376" height="80"/>
@@ -295,16 +300,16 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="-200" translatesAutoresizingMaskIntoConstraints="NO" id="GYK-gW-tmO">
-                                                        <rect key="frame" x="0.0" y="145" width="376" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="145" width="376" height="10.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aO8-ju-NJI">
-                                                                <rect key="frame" x="0.0" y="0.0" width="288" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="288" height="10.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOe-3O-Wpg">
-                                                                <rect key="frame" x="88" y="0.0" width="288" height="20.5"/>
+                                                                <rect key="frame" x="88" y="0.0" width="288" height="10.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -312,7 +317,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Lj1-vj-PIP">
-                                                        <rect key="frame" x="0.0" y="173.5" width="376" height="64"/>
+                                                        <rect key="frame" x="0.0" y="163.5" width="376" height="64"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleAspectFit" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="505-Ak-tuq">
                                                                 <rect key="frame" x="0.0" y="0.0" width="376" height="30"/>
@@ -323,6 +328,9 @@
                                                                 <state key="normal" title="Directions">
                                                                     <color key="titleColor" red="0.98132029549999999" green="1" blue="0.97997777890000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="getActivityDirections:" destination="OYq-8R-ipV" eventType="touchUpInside" id="U6g-in-mPY"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EE0-4n-4oP">
                                                                 <rect key="frame" x="0.0" y="34" width="376" height="30"/>
