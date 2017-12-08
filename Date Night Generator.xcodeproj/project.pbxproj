@@ -21,13 +21,9 @@
 		D443373E1F57539600717F13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D443373C1F57539600717F13 /* Main.storyboard */; };
 		D44337401F57539600717F13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D443373F1F57539600717F13 /* Assets.xcassets */; };
 		D44337431F57539600717F13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D44337411F57539600717F13 /* LaunchScreen.storyboard */; };
-		D445FBFC1FBE966A007475A2 /* Movie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D445FBF91FBE966A007475A2 /* Movie.jpg */; };
-		D445FBFD1FBE966A007475A2 /* CasaMarina.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D445FBFA1FBE966A007475A2 /* CasaMarina.jpg */; };
-		D445FBFE1FBE966A007475A2 /* Sizzler.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D445FBFB1FBE966A007475A2 /* Sizzler.jpg */; };
 		D4C5DC6D1F69BDD1006F7A4F /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C5DC6C1F69BDD1006F7A4F /* Data.swift */; };
 		D4C5DC6F1F69BE21006F7A4F /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C5DC6E1F69BE21006F7A4F /* Date.swift */; };
 		D4FAC1C11FD4D26F00345423 /* FakeAPILists.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FAC1C01FD4D26F00345423 /* FakeAPILists.swift */; };
-		D4FAC1C31FD4D63A00345423 /* Chickasaw.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4FAC1C21FD4D63900345423 /* Chickasaw.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,13 +43,9 @@
 		D443373F1F57539600717F13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D44337421F57539600717F13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D44337441F57539600717F13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D445FBF91FBE966A007475A2 /* Movie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Movie.jpg; sourceTree = "<group>"; };
-		D445FBFA1FBE966A007475A2 /* CasaMarina.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CasaMarina.jpg; sourceTree = "<group>"; };
-		D445FBFB1FBE966A007475A2 /* Sizzler.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Sizzler.jpg; sourceTree = "<group>"; };
 		D4C5DC6C1F69BDD1006F7A4F /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		D4C5DC6E1F69BE21006F7A4F /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		D4FAC1C01FD4D26F00345423 /* FakeAPILists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAPILists.swift; sourceTree = "<group>"; };
-		D4FAC1C21FD4D63900345423 /* Chickasaw.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Chickasaw.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,21 +59,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D40C35991FBE4757009C198F /* Pictures */ = {
-			isa = PBXGroup;
-			children = (
-				D445FBFA1FBE966A007475A2 /* CasaMarina.jpg */,
-				D445FBF91FBE966A007475A2 /* Movie.jpg */,
-				D4FAC1C21FD4D63900345423 /* Chickasaw.jpg */,
-				D445FBFB1FBE966A007475A2 /* Sizzler.jpg */,
-			);
-			path = Pictures;
-			sourceTree = "<group>";
-		};
 		D443372A1F57539500717F13 = {
 			isa = PBXGroup;
 			children = (
-				D40C35991FBE4757009C198F /* Pictures */,
 				D44337351F57539500717F13 /* Date Night Generator */,
 				D44337341F57539500717F13 /* Products */,
 			);
@@ -180,12 +160,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4FAC1C31FD4D63A00345423 /* Chickasaw.jpg in Resources */,
-				D445FBFC1FBE966A007475A2 /* Movie.jpg in Resources */,
-				D445FBFE1FBE966A007475A2 /* Sizzler.jpg in Resources */,
 				D44337431F57539600717F13 /* LaunchScreen.storyboard in Resources */,
 				D44337401F57539600717F13 /* Assets.xcassets in Resources */,
-				D445FBFD1FBE966A007475A2 /* CasaMarina.jpg in Resources */,
 				D443373E1F57539600717F13 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

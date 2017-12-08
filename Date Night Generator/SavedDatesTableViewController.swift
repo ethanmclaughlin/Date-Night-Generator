@@ -117,6 +117,7 @@ class SavedDatesTableViewController: UITableViewController {
         if let datedetailsVC = segue.destination as? DatesViewController{
             let generatedDateObject = passingDate
             datedetailsVC.date = generatedDateObject
+            datedetailsVC.TryAgainButton.isEnabled = false
         }
     }
     

@@ -14,14 +14,12 @@ class DatesViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        MealStackView.removeFromSuperview()
-        activityStackView.removeFromSuperview()
-        
-        if date.meal != nil {
-            scrollview.addSubview(MealStackView)
+   
+        if (date.meal == nil){
+            MealStackView.removeFromSuperview()
         }
-        if date.activity != nil{
-            scrollview.addSubview(activityStackView)
+        if (date.activity == nil){
+            activityStackView.removeFromSuperview()
         }
         populateDates()
     }
@@ -43,9 +41,12 @@ class DatesViewController: UIViewController {
     
     @IBOutlet weak var mealAddress: UILabel!
     @IBOutlet weak var mealName: UILabel!
+
+    @IBOutlet weak var superstackview: UIStackView!
     
-    @IBOutlet weak var scrollview: UIScrollView!
     var date = Date(activity: nil, meal: nil)
+
+    @IBOutlet weak var TryAgainButton: UIButton!
     
     
     func populateDates(){
@@ -67,6 +68,7 @@ class DatesViewController: UIViewController {
         
     }
     
+
     
     /*
     // MARK: - Navigation
